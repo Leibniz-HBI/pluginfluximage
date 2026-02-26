@@ -1,6 +1,6 @@
 # TypingMind Flux.1 Plugin  
   
-A custom TypingMind plugin for generating images using **Flux.1 Pro**, **Flux.1 Dev**, and **Flux.1 Schnell** through the **FAL.ai API**.  
+A custom TypingMind plugin for generating images using **Flux.1 Pro**, **Flux.1 Dev**, and **Flux.1 Schnell** through the **IONOS API**.  
   
 This plugin was created to provide:  
 - More freedom than DALL·E or ChatGPT image tools  
@@ -19,7 +19,7 @@ This plugin was created to provide:
 - **flux-schnell** — fastest  
   
 ### User Settings in TypingMind  
-- FAL.ai API Key  
+- IONOS API Key  
 - Default model  
 - Width / height  
 - Seed (optional)  
@@ -35,14 +35,14 @@ This plugin was created to provide:
   
 1. Copy the raw link to `manifest.json`:  
    Example:  
-   `https://raw.githubusercontent.com/YOURNAME/typingmind-flux-plugin/main/manifest.json`  
+   `https://raw.githubusercontent.com/Leibniz-HBI/pluginfluximage/main/manifest.json`  
   
 2. Open TypingMind → Settings → Plugins → Install from URL  
   
 3. Paste the raw manifest.json URL  
    TypingMind will auto-load both `manifest.json` and `plugin.js`.  
   
-4. Enter your **FAL.ai API Key** in plugin settings.  
+4. Enter your **API Key** in plugin settings.  
   
 ---  
   
@@ -63,11 +63,3 @@ Or simply the model:
   
 - `plugin.json` — plugin manifest  
 - `implementation.js` — main implementation  
-  
----  
-  
-## Future Upgrades  
-  
-- Add more advanced parameters (batches, upscale)  
-- Support other Flux models as FAL.ai adds them  
-- In-UI option to preview outputs
