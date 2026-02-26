@@ -11,7 +11,7 @@ function escapeMarkdownAlt(text) {
 
 async function flux_image_generator(params, userSettings) {
   const { prompt, negative_prompt = "" } = params;
-  const falKey = userSettings.falKey;
+  const falKey = userSettings.apiKey;
   const model = userSettings.model || "flux-dev";
   const width = userSettings.width || 1024;
   const height = userSettings.height || 1024;
@@ -19,13 +19,13 @@ async function flux_image_generator(params, userSettings) {
   const cfg = userSettings.cfg || 7;
 
   if (!falKey) {
-    throw new Error("Missing FAL API key. Add it in plugin settings.");
+    throw new Error("Missing API key. Add it in plugin settings.");
   }
 
   const endpoints = {
-    "flux-dev": "https://fal.run/fal-ai/flux-dev",
-    "flux-pro": "https://fal.run/fal-ai/flux-pro",
-    "flux-schnell": "https://fal.run/fal-ai/flux-schnell"
+    "flux-dev": "https://URLTOMODELAPI/flux-dev",
+    "flux-pro": "https://URLTOMODELAPI/flux-pro",
+    "flux-schnell": "https://URLTOMODELAPI/flux-schnell"
   };
 
   const endpoint = endpoints[model];
@@ -52,7 +52,7 @@ async function flux_image_generator(params, userSettings) {
   });
 
   if (response.status === 401) {
-    throw new Error("Invalid FAL API key.");
+    throw new Error("Invalid API key.");
   }
 
   if (!response.ok) {
